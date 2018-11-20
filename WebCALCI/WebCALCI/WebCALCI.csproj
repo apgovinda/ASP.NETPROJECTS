@@ -169,7 +169,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="Properties\PublishProfiles\WebCalci - FTP.pubxml" />
-    <None Include="Properties\PublishProfiles\WebCalci - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\WebCalciWebDeploy.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
