@@ -1,0 +1,52 @@
+﻿@model List<Operation>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <style>
+        input[type=text] {
+            background-color: #00ff00;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <form action="@Url.Action("UpdateOperations", "Calculator")" method="get">
+            <table border="1">
+                <tr style="background-color:#ffd800">
+                    <th>Num1 </th>
+                    <th> + </th>
+                    <th>Num2 </th>
+                    <th> = </th>
+                    <th>Result </th>
+                </tr>
+                @foreach (Operation op in Model)
+                {
+                    <tr>
+                        <td align="center">@op.Num1 </td>
+                        <td align="center"> + </td>
+                        <td align="center">@op.Num2 </td>
+                        <td> = </td>
+                        <td align="right">@op.Result </td>
+                    </tr>
+                }
+                <tr>
+                    <td>@Html.TextBox("Num1", null, new { @class = "form-control" })  </td>
+                    <td> + </td>
+                    <td>@Html.TextBox("Num2", null, new { @class = "form-control" })  </td>
+                    <td> = </td>
+                    <td align="center"><input type="submit" value="Add"></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>
+
