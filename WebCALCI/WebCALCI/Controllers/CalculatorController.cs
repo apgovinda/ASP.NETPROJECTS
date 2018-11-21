@@ -19,7 +19,7 @@ namespace WebCALCI.Controllers
         {
             operation.Result = operation.Num1 + operation.Num2;
             operations.Add(operation);
-            return View("index", operations);
+            return View("Index", operations);
         }
     }
 }
